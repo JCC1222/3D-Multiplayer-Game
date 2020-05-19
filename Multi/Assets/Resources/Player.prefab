@@ -102,13 +102,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708565465819177719}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.5869999, y: 0.551, z: 1.214}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.73099995, z: -0.0010000467}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7699689302609388813}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &921297196893668080
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,7 +173,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489378622055169364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.721427, y: 1.22, z: -1.2408326}
+  m_LocalPosition: {x: 3.721427, y: 1.22, z: -1.317}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5941129817520003767}
@@ -334,7 +334,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 7699689302609388813}
   normalCam: {fileID: 661542192706217930}
-  weaponCam: {fileID: 661542192706217930}
   weapon: {fileID: 2156564013893489372}
   xSensitivity: 200
   ySensitivity: 200
@@ -476,7 +475,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7819408249003325849}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.73099995, z: 0.2760468}
+  m_LocalPosition: {x: 0, y: 0.73099995, z: 0.117}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5941129817520003767}

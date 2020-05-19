@@ -11,7 +11,6 @@ public class Look : MonoBehaviourPunCallbacks
 
     public Transform player;
     public Transform normalCam;
-    public Transform weaponCam;
     public Transform weapon;
 
     public float xSensitivity;
@@ -38,7 +37,7 @@ public class Look : MonoBehaviourPunCallbacks
 
         UpdateCursorLock();
 
-        weaponCam.rotation = normalCam.rotation;
+        weapon.rotation = normalCam.rotation;
     }
 
     #endregion
@@ -56,7 +55,6 @@ public class Look : MonoBehaviourPunCallbacks
             normalCam.localRotation = t_delta;
         }
 
-        weapon.rotation = normalCam.rotation;
     }
 
     void SetX()

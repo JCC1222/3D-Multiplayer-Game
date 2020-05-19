@@ -20,6 +20,8 @@ public class Motion : MonoBehaviourPunCallbacks
     private Vector3 targetWeaponBobPosition;
     private Vector3 weaponParentOrigin;
 
+    private float current_recovery;
+
     private float movementCounter;
     private float idleCounter;
 
@@ -60,6 +62,7 @@ public class Motion : MonoBehaviourPunCallbacks
         if (isJumping)
         {
             rig.AddForce(Vector3.up * jumpForce);
+            current_recovery = 0f;
         }
 
         //Head Bob
