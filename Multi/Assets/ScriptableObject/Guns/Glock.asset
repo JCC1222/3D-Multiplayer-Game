@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Glock
   m_EditorClassIdentifier: 
   name: Glock
+  damage: 25
   firerate: 0.4
   bloom: 20
   recoil: 5

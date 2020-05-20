@@ -7,7 +7,7 @@ public class Manager : MonoBehaviour
 {
 
     public string player_prefab;
-    public Transform spawn_point;
+    public Transform[] spawn_point;
 
     // Start is called before the first frame update
     private void Start()
@@ -18,6 +18,7 @@ public class Manager : MonoBehaviour
     // Update is called once per frame
     public void Spawn()
     {
-        PhotonNetwork.Instantiate(player_prefab, spawn_point.position, spawn_point.rotation);
+        Transform t_spawn = spawn_point[Random.Range(0, spawn_point.Length)];
+        PhotonNetwork.Instantiate(player_prefab, t_spawn.position, t_spawn.rotation);
     }
 }

@@ -9,6 +9,7 @@ public class Motion : MonoBehaviourPunCallbacks
     public float speed;
     public float sprintModifier;
     public float jumpForce;
+    public int max_health;
     public Camera normalCam;
     public Transform weaponParent;
     public GameObject cameraParent;
@@ -26,10 +27,17 @@ public class Motion : MonoBehaviourPunCallbacks
     private float idleCounter;
 
     private float baseFOV;
+
+    private int current_health;
+    private Manager manager;
+
     private float sprintFOVModifier = 1.25f;
 
     private void Start()
     {
+        manager = GameObject.Find("Manager").GetComponent<Manager>();
+        current_health = max_health;
+
         cameraParent.SetActive(photonView.IsMine);
 
         if (!photonView.IsMine) gameObject.layer = 11 ;
@@ -114,6 +122,25 @@ public class Motion : MonoBehaviourPunCallbacks
     {
         targetWeaponBobPosition = weaponParentOrigin + new Vector3(Mathf.Cos(p_z) * p_x_intensity,
             Mathf.Sin(p_z * 2) * p_y_intensity, 0);
+    }
+
+    #endregion
+
+    #region Public Methods
+
+    public void TakeDamage(int p_damage)
+    {
+        if (photonView.IsMine)
+        {
+            current_health -= p_damage;
+            Debug.Log(current_health);
+
+            if(current_health <= 0)
+            {
+                manager.Spawn();
+                PhotonView.Destroy(gameObject);
+            }
+        }
     }
 
     #endregion
